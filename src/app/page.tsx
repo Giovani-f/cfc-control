@@ -24,6 +24,7 @@ export default function Home() {
               height={24}
               priority
             />
+            <li>daskljda</li>
           </a>
         </div>
       </div>
