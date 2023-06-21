@@ -8,7 +8,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-zinc-900">
+    <div className="bg-custom-black">
       <header className="container mx-auto">
         <NavbarDesktop setMobileMenuOpen={setMobileMenuOpen} />
         <NavbarMobile

@@ -45,18 +45,18 @@ export default function NavbarDesktop({ setMobileMenuOpen }: NavbarProps) {
           <Link
             key={item.name}
             href={item.href}
-            className="text-sm font-semibold leading-6 text-white hover:text-amber-400"
+            className="text-sm font-medium leading-6 text-white hover:text-custom-yellow-400"
           >
             {item.name}
           </Link>
         ))}
       </div>
-      <div className="hidden items-center gap-10 md:flex md:flex-1 lg:flex lg:flex-1 lg:justify-end">
-        <div className="flex w-auto items-center justify-center rounded bg-amber-400 px-6 py-3 text-sm font-semibold text-zinc-900">
+      <div className="hidden items-center gap-10 md:ml-10 lg:flex lg:flex-1 lg:justify-end">
+        <div className="flex w-auto items-center justify-center rounded bg-custom-yellow-400 py-3 text-sm font-medium text-custom-black lg:px-6 xl:px-8">
           <Link href="#">Solicitar demonstração</Link>
         </div>
-        <a href="#" className="text-sm font-semibold leading-6 text-white">
-          Log in <span aria-hidden="true">&rarr;</span>
+        <a href="#" className="text-sm font-medium leading-6 text-white">
+          Fazer Login
         </a>
       </div>
     </nav>
