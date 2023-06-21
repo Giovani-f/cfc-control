@@ -8,8 +8,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-custom-black">
-      <header className="container mx-auto">
+    <div className="bg-white">
+      <header className="py-10">
         <NavbarDesktop setMobileMenuOpen={setMobileMenuOpen} />
         <NavbarMobile
           mobileMenuOpen={mobileMenuOpen}

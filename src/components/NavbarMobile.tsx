@@ -1,7 +1,6 @@
-import { logo } from '@/assets'
+import Logo from '@/assets/icons/logo'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
 import Link from 'next/link'
 
 interface NavbarMobileProps {
@@ -38,10 +37,19 @@ export default function NavbarMobile({
         >
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-custom-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+            <div className="mt-3.5 flex items-center justify-between">
+              <a
+                href="#"
+                className="-m-1.5 flex items-center justify-center p-1.5 text-white"
+              >
                 <span className="sr-only">Your Company</span>
-                <Image className="h-8 w-auto" src={logo} alt="Any Company" />
+                <Logo
+                  className="flex h-8 w-auto text-center"
+                  fill="#ffffff"
+                  width={40}
+                  height={40}
+                />
+                <span className="ml-4 text-xl font-semibold">CFC Control</span>
               </a>
               <button
                 type="button"

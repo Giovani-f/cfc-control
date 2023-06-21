@@ -1,31 +1,25 @@
-import Image from 'next/image'
-
 export default function HeroSection() {
   return (
-    <section className="body-font h-full bg-custom-black pt-10 text-gray-600">
-      <div className="container mx-auto flex flex-col items-center px-5 py-24 md:flex-row">
-        <div className="mb-16 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24">
-          <h1 className="mb-6 font-bold text-white sm:text-5xl lg:text-5xl">
-            Dirija sua Autoescola com facilidade
-          </h1>
-          <p className="mb-16 leading-relaxed text-white">
-            Gerencie seus alunos, instrutores, aulas e horários de forma
-            eficiente com nossa plataforma amigável.
-          </p>
-          <div className="flex justify-center">
-            <button className="inline-flex rounded-md border-0 bg-custom-yellow-400 px-6 py-4 text-lg font-medium text-custom-black hover:bg-custom-yellow-500 focus:outline-none lg:px-5">
-              Solicitar demonstração {'->'}
-            </button>
-          </div>
-        </div>
-        <div className="shadow-lg md:w-1/2 lg:w-full lg:max-w-3xl">
-          <Image
-            width={768}
-            height={549}
-            className="rounded object-cover object-center"
-            alt="hero"
-            src="https://source.unsplash.com/4STq2B24S1k"
-          />
+    <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 pb-16 pt-20 text-center sm:px-6 lg:px-8 lg:pt-32">
+        <h1 className="font-display mx-auto max-w-4xl text-5xl font-semibold tracking-tight text-slate-900 sm:text-7xl">
+          Gerencie sua{' '}
+          <span className="relative whitespace-nowrap text-amber-400">
+            Autoescola
+          </span>{' '}
+          de forma simples
+        </h1>
+        <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
+          Simplifique, otimize e modernize seus processos com nossa plataforma
+          de gestão especializada para autoescolas
+        </p>
+        <div className="mb-24 mt-16 flex justify-center gap-x-6">
+          <a
+            className="group inline-flex items-center justify-center rounded-full bg-slate-900 px-16 py-5 text-sm font-semibold text-white hover:bg-slate-700 hover:text-slate-100 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:bg-slate-800 active:text-slate-300 md:px-20"
+            href="/register"
+          >
+            Solicitar demonstração <span className="ml-2">{'->'}</span>
+          </a>
         </div>
       </div>
     </section>
