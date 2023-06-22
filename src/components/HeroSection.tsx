@@ -11,7 +11,7 @@ export default function HeroSection() {
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
           Simplifique, otimize e modernize seus processos com nossa plataforma
-          de gestão especializada para autoescolas
+          de gestão especializada para autoescolas.
         </p>
         <div className="mb-24 mt-16 flex justify-center gap-x-6">
           <a
