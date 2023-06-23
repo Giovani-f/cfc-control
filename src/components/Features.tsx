@@ -12,6 +12,8 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
+import backgroundImage from '@/assets/images/background-features.png'
+
 const features = [
   {
     title: 'Alunos',
@@ -24,6 +26,8 @@ const features = [
     description:
       'Agende aulas de forma simples e rápida, otimizando o tempo da sua equipe e dos alunos.',
     icon: CalendarDaysIcon,
+    image:
+      'https://salient.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fexpenses.3f331919.png&w=1200&q=75',
   },
   {
     title: 'Instrutores',
@@ -61,10 +65,19 @@ export default function Features() {
       id="features"
       className="relative overflow-hidden bg-slate-900 pb-28 pt-20 sm:py-32"
     >
+      <Image
+        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
+        src={backgroundImage}
+        alt=""
+        width={2245}
+        height={1636}
+        unoptimized
+      />
+
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
-            Recursos Poderosos para Potencializar seu Negócio.
+            Recursos Poderosos para Potencializar seu Negócio
           </h2>
           <p className="mt-6 text-lg tracking-tight text-gray-300">
             Aprimore a gestão, otimize aulas e proporcione uma experiência
@@ -88,9 +101,9 @@ export default function Features() {
                         className={clsx(
                           'group relative rounded-full px-4 py-2 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
                           {
-                            'bg-white/10 ring-1 ring-inset ring-white/10':
+                            'bg-slate-50/10 ring-1 ring-inset ring-white/10':
                               selectedIndex === featureIndex,
-                            'hover:bg-white/10 lg:hover:bg-white/5':
+                            'hover:bg-slate-50/10 lg:hover:bg-slate-50/5':
                               selectedIndex !== featureIndex,
                           },
                         )}
@@ -109,7 +122,7 @@ export default function Features() {
                             <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
                             <div className="flex items-center justify-center gap-2">
                               <feature.icon
-                                className="h-5 w-5 text-amber-500"
+                                className="h-5 w-5 text-amber-400"
                                 aria-hidden="true"
                               />
                               {feature.title}
@@ -133,14 +146,17 @@ export default function Features() {
                   {features.map((feature) => (
                     <Tab.Panel key={feature.title} unmount={false}>
                       <div className="relative sm:px-6 lg:hidden">
-                        <div className="absolute -inset-x-4 -bottom-[4.25rem] -top-[6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
+                        <div className="absolute -inset-x-4 -bottom-[4.25rem] -top-[6.5rem] bg-slate-50/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
                         <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
                           {feature.description}
                         </p>
                       </div>
                       <div className="relative mt-10 aspect-[1085/730] w-[45rem] overflow-hidden rounded-xl bg-slate-900 shadow-xl shadow-slate-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                         <Image
-                          src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+                          src={
+                            feature.image ||
+                            'https://tailwindui.com/img/component-images/dark-project-app-screenshot.png'
+                          }
                           alt=""
                           layout="fill"
                           priority
