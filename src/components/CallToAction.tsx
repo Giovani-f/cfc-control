@@ -20,24 +20,23 @@ export default function CallToAction() {
             <defs>
               <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
                 <stop stopColor="#7775D6" />
-                <stop offset={0.5} stopColor="#fbbf24" />
+                <stop offset={0.5} stopColor="#DA2C43" />
               </radialGradient>
             </defs>
           </svg>
           <div className="mx-auto flex max-w-2xl flex-col text-center lg:py-32">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Boost your productivity.
-              <br />
-              Start using our app today.
+              Transforme sua Autoescola. <br /> Comece a usar nossa plataforma
+              agora.
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
-              Malesuada adipiscing sagittis vel nulla.
+              Descubra o poder da gestão simplificada com nossa demonstração
+              personalizada.
             </p>
 
             <div className=" mt-16 flex justify-center gap-x-6">
               <a
-                className="group inline-flex items-center justify-center rounded-full bg-amber-400 px-16 py-5 text-sm font-semibold text-slate-900 hover:bg-amber-300 hover:text-gray-700 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:bg-amber-300 active:text-gray-700 md:px-20"
+                className="group inline-flex items-center justify-center rounded-full bg-red-400 px-16 py-5 text-sm font-semibold text-white hover:bg-red-300 hover:text-gray-700 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:bg-red-300 active:text-gray-700 md:px-20"
                 href="/register"
               >
                 Solicitar demonstração <span className="ml-2">{'->'}</span>

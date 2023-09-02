@@ -122,7 +122,7 @@ export default function Features() {
                             <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
                             <div className="flex items-center justify-center gap-2">
                               <feature.icon
-                                className="h-5 w-5 text-amber-400"
+                                className="h-5 w-5 text-red-400"
                                 aria-hidden="true"
                               />
                               {feature.title}
